@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спорт, Кроссовки</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; margin: 0; padding: 15px; color: #333; }
+        header { background: #fff; padding: 20px; border-radius: 20px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { color: #003366; margin: 0; font-size: 26px; text-transform: uppercase; letter-spacing: 1px; }
+        .container { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+        .card { background: #fff; width: 47%; padding: 10px; border-radius: 18px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); box-sizing: border-box; transition: 0.3s; }
+        .card img { width: 100%; border-radius: 12px; height: 120px; object-fit: cover; }
+        .card h3 { font-size: 15px; margin: 10px 0 5px; color: #444; }
+        .card p { color: #ff4500; font-weight: bold; font-size: 16px; margin: 5px 0; }
+        .btn { display: block; background: #003366; color: white; padding: 10px; border-radius: 10px; text-decoration: none; font-size: 13px; font-weight: bold; cursor: pointer; border: none; width: 100%; }
+        .btn:active { background: #0055aa; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Спорт, Кроссовки</h1>
+    <p>Твой путь к победе начинается здесь</p>
+</header>
+
+<div class="container">
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400" alt="Nike Red">
+        <h3>Nike Speed Red</h3>
+        <p>12 900 ₽</p>
+        <button class="btn" onclick="buy('Nike Speed Red')">Купить</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400" alt="Jordan White">
+        <h3>Jordan Air Max</h3>
+        <p>15 500 ₽</p>
+        <button class="btn" onclick="buy('Jordan Air Max')">Купить</button>
+    </div>
+    
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400" alt="Nike Green">
+        <h3>Nike Sport Green</h3>
+        <p>11 200 ₽</p>
+        <button class="btn" onclick="buy('Nike Sport Green')">Купить</button>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400" alt="Classic">
+        <h3>Classic Runner</h3>
+        <p>9 800 ₽</p>
+        <button class="btn" onclick="buy('Classic Runner')">Купить</button>
+    </div>
+</div>
+
+<script>
+    function buy(model) {
+        // ЗАМЕНИ 'ТВОЙ_НИК' НА СВОЙ ЛОГИН ТЕЛЕГРАМ (БЕЗ @)
+        const myTelegram = 'Mirjalolthebest'; 
+        const message = "Здравствуйте! Я хочу заказать кроссовки: " + model;
+        window.open("https://t.me/" + myTelegram + "?text=" + encodeURIComponent(message));
+    }
+</script>
+
+</body>
+</html>
